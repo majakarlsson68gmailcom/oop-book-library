@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.js"></script>
+    <title>Library Managment System</title>
+  </head>
+  <body class="bg-gray-100 p6">
+    <div class="max-w-4xl mx-auto space-y-6"> 
+      <h1 class="text-3xl font-bold text-gray-800 text-center pbs-6">Library Managment System</h1>
+
+      <!-- User Switcher -->
+      <div class="flex flex-col xl:flex-row">
+        <label class="text-gray-900 block font-semibold xl:mx-2" for="userSwitcher">Choose User View:</label>
+        <select class="text-gray-900 border p-2 rounded" name="userSwitcher" id="userSwitcher">
+          <option value="member">Member View</option>
+          <option value="admin">User View</option>
+        </select>
+      </div>
+
+      <!-- Book Entry Form -->
+       <section id="bookSection" class="bg-white p-6 rounded shadow">
+        <h2 class="text-gray-800 font-semibold text-xl">Add a New Book</h2>
+        <form id="bookForm" class="flex max-w-md flex-col gap-4">
+          <div class="flex flex-col gap-1.5">
+            <label for="title" class="text-gray-700 text-sm font-medium">Title</label>
+            <input type="text" id="title" required class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-400 transition focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10"/>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="author" class="text-gray-700 text-sm font-medium">Author</label>
+            <input type="text" id="author" required class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-400 transition focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10"/>
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="genre" class="text-gray-700 text-sm font-medium">Genre</label>
+            <input type="text" id="genre" required class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-gray-900 placeholder:text-gray-400 transition focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/10"/>
+          </div>
+          <button type="submit"
+          class="cursor-pointer self-start rounded-lg border border-gray-200 bg-gray-100 px-4 py-2 text-sm font-medium text-gray-900 transition hover:bg-gray-200 active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-900/20">Add Book</button>
+        </form>
+       </section>
+    </div>
+    
+  </body>
+</html>
